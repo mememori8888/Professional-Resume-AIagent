@@ -1,0 +1,41 @@
+name: AI Issue Responder with Profile
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  respond_with_context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 1. プロフィールファイルを読み込んで変数に格納
+      - name: Read Profile
+        id: profile
+        run: |
+          PROFILE=$(cat .github/ai-profile.md)
+          echo "content<<EOF" >> $GITHUB_OUTPUT
+          echo "$PROFILE" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      # 2. AI APIを呼び出す（ここでは疑似的なスクリプト例）
+      - name: Generate Response
+        id: ai
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          PROFILE_CONTENT: ${{ steps.profile.outputs.content }}
+          API_KEY: ${{ secrets.AI_API_KEY }}
+        run: |
+          # ここでcurlやPythonスクリプトを使い、以下のプロンプトを送信
+          # プロンプト例:
+          # "あなたは以下のプロフィールを持つ人物として振る舞ってください: $PROFILE_CONTENT"
+          # "このIssueの内容を要約し、挨拶をしてください: $ISSUE_BODY"
+          echo "answer=こんにちは！プロフィールの内容に基づき、Issueの要約を作成しました..." >> $GITHUB_OUTPUT
+
+      # 3. コメントとして投稿
+      - name: Post Comment
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: ${{ steps.ai.outputs.answer }}
