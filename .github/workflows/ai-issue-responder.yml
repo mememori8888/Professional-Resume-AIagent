@@ -1,4 +1,32 @@
-- name: Generate AI Response
+name: AI Issue Responder
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  respond:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Read Profile
+        id: profile
+        run: |
+          if [ -f .github/ai-profile.md ]; then
+            CONTENT=$(cat .github/ai-profile.md)
+          else
+            CONTENT="あなたは陽気なエンジニア萬俵さんのAIアシスタントです。"
+          fi
+          # ヒアドキュメントで安全に出力
+          echo "content<<EOF" >> $GITHUB_OUTPUT
+          echo "$CONTENT" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Generate AI Response
         id: gemini
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -6,25 +34,24 @@
           ISSUE_BODY: ${{ github.event.issue.body }}
           USER_PROFILE: ${{ steps.profile.outputs.content }}
         run: |
-          # プロンプト作成
-          PROMPT="あなたは以下のプロフィールを持つ萬俵秀俊さんのAIアシスタントです。陽気に挨拶し、Issueを要約してください。
-          プロフィール: $USER_PROFILE
-          Issueタイトル: $ISSUE_TITLE
-          Issue本文: $ISSUE_BODY"
-
-          # API呼び出し
+          # プロンプトを安全にJSON化してAPIを叩く
           RESPONSE=$(curl -s -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}" \
             -H 'Content-Type: application/json' \
             -d "{
               \"contents\": [{
-                \"parts\":[{\"text\": $(echo "$PROMPT" | jq -Rs .)}]
+                \"parts\":[{\"text\": $(echo "プロフィール: $USER_PROFILE\n\nIssue内容: $ISSUE_TITLE $ISSUE_BODY\n\n上記に基づき、陽気に挨拶と要約をして！" | jq -Rs .)}]
               }]
             }")
 
-          # 回答を抽出
-          ANSWER=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text')
-
-          # 【重要】ここを以下の形式に修正してください！
+          # 結果の抽出
+          ANSWER=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text // "エラーが発生したみたいっす！ログを見てほしいっす！🤖"')
+          
           echo "answer<<EOF" >> $GITHUB_OUTPUT
           echo "$ANSWER" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Post Comment
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: ${{ steps.gemini.outputs.answer }}
