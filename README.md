@@ -102,6 +102,14 @@ This system is a playground for **Prompt Engineering** and **Issue-ops**. I cont
 形態
 
 業務内容
+
+2026.03　-　現在
+
+契約社員
+Amazon西宮IXD:アソシエイツ
+
+2025.07　-　2025.08
+
 派遣
 大手物流倉庫（Amazon京田辺等）：ピッキング・仕分け。
 
