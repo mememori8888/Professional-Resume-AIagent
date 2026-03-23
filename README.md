@@ -97,7 +97,7 @@
 | :--- | :--- | :--- |
 | **2026.03 - 現在 (Present)** | 契約社員 (Contract) | **Amazon西宮IXD: アソシエイツ**<br>*Amazon Nishinomiya IXD: Associate* |
 | **2025.07 - 2025.08** | 派遣 (Temp) | **大手物流倉庫（Amazon京田辺等）:** ピッキング・仕分け。<br>*Major Logistics Warehouses (Amazon Kyotanabe, etc.): Picking & Sorting.* |
-| **2023.07 - 2023.12** | 委託 (Outsourced) | **民泊運営代行:** 客室清掃・点検。期間中無事故を達成。<br>*Vacation Rental Management: Room cleaning and inspection. Achieved zero accidents during the period.* |
+| **2023.07 - 2023.12** | 委託 (Outsourced) | **民泊運営代行(Matsuri Technologies):** 客室清掃・点検。期間中無事故を達成。<br>*Vacation Rental Management: Room cleaning and inspection. Achieved zero accidents during the period.* |
 | **2018.10 - 2019.04** | 派遣 (Temp) | **株式会社FIPDC（富士通系列）:** サーバー監視・運用オペレーター。<br>*FIPDC Co., Ltd. (Fujitsu Group): Server monitoring and operations operator.* |
 | **2007.04 - 2018.09** | 正/派 (Full-time/Temp) | **トヨタ自動車九州、日本通運等:** 製造ライン、品質チェック業務。<br>*Toyota Motor Kyushu, Nippon Express, etc.: Manufacturing line, quality check operations.* |
 
