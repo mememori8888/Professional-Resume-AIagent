@@ -1,0 +1,40 @@
+Hardware & Systems Engineering Work Products Contributor | AI Training Data
+About the Role
+If you have real engineering project documents sitting in your files, you can turn them into income with very little extra work. We're looking for hardware and systems engineers to submit real project artifacts that will be used to evaluate and train frontier AI models.
+
+No new documents to write, no long commitments. If the artifacts already exist and you have the legal right to share them, you're ready to submit.
+
+Organization: Alignerr
+Type: Per-Submission Contract
+Location: Remote
+Rate: $90 to $100 per accepted submission
+Commitment: Flexible, submit at your own pace
+What You'll Do
+Submit two real artifacts from the same project: one requirements document and one final design document
+Ensure both artifacts are genuine deliverables from actual engineering work, not written or recreated for this submission
+Redact identifying information (company names, customer names, personnel, proprietary part numbers) if needed, and note any redactions in the metadata
+Package both artifacts into a single .zip file with the required folder structure
+Populate all required metadata fields accurately
+Confirm you have the legal right to share the material
+Who You Are
+Practicing or former hardware or systems engineer with real project experience
+Your discipline is one of the following: mechanical, aerospace, electrical, materials, chemical, civil, controls, manufacturing, or systems engineering, software-only engineering does not qualify
+You have existing project artifacts you are legally allowed to share, no active NDA blocking, no ITAR or EAR controlled content
+Strong written English skills for metadata and submission accuracy
+What Makes a Perfect Submission
+A requirements document that was actually used to drive the design, including functional requirements, performance thresholds, interface requirements, constraints, and assumptions
+A final design document that represents the real deliverable: CAD files, schematics, stress analyses, drawing packages, simulation outputs, or equivalent
+Both artifacts are from the same project and clearly traceable to each other
+Tradeoffs, waived requirements, or scope changes are included if they exist in the original documentation
+What Does Not Qualify
+Documents created or rewritten specifically for this submission
+Coursework, textbook examples, or fabricated case studies
+Software-only projects
+Marketing materials, sales decks, or executive summaries presented as design documents
+Submissions where you do not have the legal right to share the artifacts
+ITAR or EAR export-controlled documents
+Why Join Us
+Earn $90 to $100 per accepted submission with no cap on the number of projects you can submit
+Fully remote and flexible, submit on your own schedule
+Your real engineering work directly contributes to shaping how frontier AI models are evaluated
+Potential for ongoing engagement as new evaluation challenges emerge
