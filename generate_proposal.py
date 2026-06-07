@@ -263,7 +263,8 @@ def build_prompt(job_posting: str, skills_md: str, template: str, policy: str = 
   箇条書きを使ってください。
 - 全体として読みやすく、押しつけがましくない文体にしてください。
 - 本案件への対応方針は次の流れで書いてください。Point（結論）: 私の強みは〇〇です。⇒Reason（理由）: なぜなら、〇〇という経験をしたからです。⇒Example（具体例）: 具体的には、FastAPIを使って〜（ここで技術の話）。⇒Point（結論）: だから、貴社で貢献できます。
--プロフィールにはhttps://www.lancers.jp/profile/hideman_mememori8888を必ず入れてください。
+- プロフィールにはhttps://www.lancers.jp/profile/hideman_mememori8888を必ず入れてください。
+-　専門用語があれば、それぞれ解説を箇条書きで追加してほしい。例　-フィジビリティ確認 新しいプロジェクト、システム開発、新規事業などを本格的にスタートさせる前に、「その計画が本当に実行可能か」「ビジネスとして成立するか」を多角的に検証することです。
 """
         template_section = f"""━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 【テンプレート】
