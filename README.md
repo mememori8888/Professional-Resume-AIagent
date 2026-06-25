@@ -79,7 +79,7 @@
 
 | 期間 | プロジェクト名 / 業務内容 | 担当フェーズ | 技術環境 (言語 / OS / DB / ツール等) |
 | :--- | :--- | :--- | :--- |
-| 2026/06～2026/07 | **Gmail対応のAI秘書エージェントパッケージ開発**<br>Gmailから自然言語で検索して回答するRAG検索システムのフルスクラッチ開発 | 要件定義〜テスト | Python 3, Linux, CSV<br>CloudRun, Bigquery, Gem,models/gemini-embedding-2  |
+| 2026/06～2026/07 | **Gmail対応のAI秘書エージェントパッケージ開発**<br>Gmailから自然言語で検索して回答するRAG検索シni-embステムのフルスクラッチ開発 | 要件定義〜テスト | Python 3, Linux, CSV<br>CloudRun, Bigquery, Gem,models/gemiedding-2  |
 | 2026/03～2026/04 | **人的資本データ抽出・分析パイプライン構築（海外企業PDF 800件）**<br>海外企業の人的資本レポート800件から非構造化データを高精度抽出するAIエージェントフルスクラッチ開発。Gemini 2.5 Flashのマルチモーダル能力によるPDF直接解析、CoTプロンプト設計、トレーサビリティ機能を実装 | 要件定義〜テスト | Python 3<br>Gemini 2.5 Flash, PyMuPDF, Claude Code |
 | 2025/09～2026/02 | **GoogleMap API リクエスト数削減のためのデータ分析フロー追加**<br>効率的なデータ抽出システム開発、ヒートマップ作成、分析レポート提出およびシステム運用 | 要件定義〜テスト | Python 3, Linux, CSV<br>GCP, GitHub Actions, Codespaces, Claude Code |
 | 2025/09～2025/09 | **GoogleMap APIを活用したデータ抽出フロー構築**<br>APIを用いた効率的な抽出システムのフルスクラッチ開発 | 要件定義〜テスト | Python 3, Linux, CSV<br>GCP, GitHub Actions, Gemini 1.5 Flash |
